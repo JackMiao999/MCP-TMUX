@@ -1,12 +1,3 @@
 {
-  "mcpServers": {
-    "tmux": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["./dist/index.js"],
-      "env": {
-        "AGENT_NAME": "claude-tmux-agent-2"
-      }
-    }
-  }
+  "mcpServers": {}
 }

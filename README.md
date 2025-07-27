@@ -7,13 +7,13 @@ A Model Context Protocol (MCP) server for operating TMUX terminal multiplexer an
 ### Install using Claude Command Line Tool (Recommended)
 
 ```bash
-claude mcp add tmux npx @mcp-tmux/server@latest
+claude mcp add tmux npx mcp-tmux-server@latest
 ```
 
 ### Manual Installation
 
 ```bash
-npm install -g @mcp-tmux/server
+npm install -g mcp-tmux-server
 ```
 
 ## Core Features
