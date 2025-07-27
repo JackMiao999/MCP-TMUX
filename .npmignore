@@ -1,0 +1,46 @@
+# 源代码（只保留编译后的文件）
+src/
+*.ts
+!dist/**/*.d.ts
+
+# 开发配置
+examples/
+.env
+.env.*
+tsconfig.json
+.eslintrc.*
+.prettierrc.*
+
+# 临时文件
+*.log
+*.tmp
+.DS_Store
+node_modules/
+.npm/
+
+# 测试文件
+test/
+tests/
+*.test.js
+*.spec.js
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude
+
+# Git
+.git/
+.gitignore
+
+# 构建缓存
+.cache/
+.turbo/
+
+# 其他
+docs/
+coverage/
+.github/
+claude-config.json

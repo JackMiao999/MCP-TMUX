@@ -1,0 +1,53 @@
+{
+  "name": "mcp-tmux-server",
+  "version": "1.0.0",
+  "description": "MCP server for TMUX terminal multiplexer operations",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-tmux": "./bin/mcp-tmux.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "postinstall": "npm run build",
+    "demo:frontend": "AGENT_NAME=frontend-agent claude --config examples/frontend-config.json",
+    "demo:backend": "AGENT_NAME=backend-agent claude --config examples/backend-config.json",
+    "clean:messages": "rm -rf ~/.mcp-tmux/messages/*",
+    "clean:agents": "rm -rf ~/.mcp-tmux/agents/*",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["mcp", "tmux", "terminal", "multiplexer", "claude", "ai"],
+  "author": "Jack Miao",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackMiao999/MCP-TMUX.git"
+  },
+  "homepage": "https://github.com/JackMiao999/MCP-TMUX#readme",
+  "bugs": {
+    "url": "https://github.com/JackMiao999/MCP-TMUX/issues"
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
